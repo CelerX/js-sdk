@@ -8,5 +8,5 @@ Please refer to our [developer docs](https://docs.celerx.app/docs/h5-guide) for 
 
 ## Example Projects
 
-- HTML5 Solo Game: [Go Celer!](https://github.com/celer-network/celerx-example-go-celer)
-- HTML5 Turn-based Game (smart contract enabled): [Gomoku](https://github.com/celer-network/celerx-example-gomoku)
+- HTML5 Solo Game: [Go Celer!](https://github.com/CelerX/js-sdk-solo-game-demo)
+- HTML5 Turn-based Game (smart contract enabled): [Gomoku](https://github.com/CelerX/js-sdk-turn-based-game-demo)
