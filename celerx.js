@@ -377,4 +377,35 @@ module.exports = window["celerSDK"] = {
     }
     return onPause.callback();
   },
+  onAdPlayFinished: function (callback) {
+    AdPlayFinished = { callback: callback };
+  },
+
+  onAdPlayFailed: function (callback) {
+    AdPlayFailed = { callback: callback };
+  },
+
+  hasMethod(methodName) {
+    return bridge.hasNativeMethod(methodName);
+  },
+
+  showAd: function (sequenceId) {
+    return bridge.call("showAd", sequenceId);
+  },
+
+  triggerOnAdPlayFinishedInGame: function (sequenceId) {
+    if (!AdPlayFinished || !AdPlayFinished.callback) {
+      return 0;
+    }
+
+    return AdPlayFinished.callback(sequenceId);
+  },
+
+  triggerOnAdPlayFailedInGame: function (sequenceId) {
+    if (!AdPlayFailed || !AdPlayFailed.callback) {
+      return 0;
+    }
+
+    return AdPlayFailed.callback(sequenceId);
+  },
 };
